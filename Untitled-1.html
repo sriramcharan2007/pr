@@ -2,10 +2,239 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Web Page</title>
+    
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a standard paragraph of text.</p>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry & Choco | Luxury Chocolates</title>
+    <style>
+        :root {
+            --primary: #800000; /* Rich maroon/cherry color */
+            --accent: #4a1c1c;  /* Deep chocolate brown */
+            --dark: #1a1a1a;
+            --light: #fef8f0;   /* Light cream color */
+        }
+
+        body {
+            font-family: 'Georgia', serif; /* A more elegant font for chocolates */
+            margin: 0;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&q=80&w=1000'); /* High-quality chocolate image */
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .price {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .order-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-top: 4rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+            max-width: 600px;
+        }
+
+        label {
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        input, select, textarea {
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #a80324;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            background: var(--dark);
+            color: white;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cherry & Choco</h1>
+    <nav>
+        <a href="#shop" style="color:white; text-decoration:none; margin-left:25px; font-weight:bold;">Our Collection</a>
+        <a href="#order" style="color:white; text-decoration:none; margin-left:25px; font-weight:bold;">Order Now</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>INDULGE IN PREMIER FLAVORS.</h2>
+    <p>Handcrafted chocolates with a touch of elegance, from Cherry & Choco.</p>
+</section>
+
+<div class="container" id="shop">
+    <h2>Our Signature Collection</h2>
+    <div class="products">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581798459219-318e76aecc7b?auto=format&fit=crop&q=80&w=600" alt="Dark Chocolate Truffles">
+            <div class="card-content">
+                <h3>Midnight Truffle Box</h3>
+                <p>Rich 70% dark chocolate truffles, perfect for connoisseurs.</p>
+                <p class="price">$24.99</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1582176211831-a89c37229a4a?auto=format&fit=crop&q=80&w=600" alt="Milk Chocolate Cherries">
+            <div class="card-content">
+                <h3>Cherry Bliss Bombs</h3>
+                <p>Juicy cherries dipped in creamy milk chocolate.</p>
+                <p class="price">$19.50</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1549007953-2f2dc0b24019?auto=format&fit=crop&q=80&w=600" alt="Assorted Chocolates">
+            <div class="card-content">
+                <h3>Elegant Assortment</h3>
+                <p>A curated selection of our finest pralines and ganaches.</p>
+                <p class="price">$39.99</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="order-section" id="order">
+        <h2>Place Your Sweet Order</h2>
+        <form action="#">
+            <label for="choco-select">Select Your Indulgence:</label>
+            <select id="choco-select" name="chocolate" required>
+                <option value="">-- Choose an Option --</option>
+                <option value="truffle">Midnight Truffle Box</option>
+                <option value="cherry">Cherry Bliss Bombs</option>
+                <option value="assortment">Elegant Assortment</option>
+            </select>
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="E.g., Alice Smith" required>
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your full street address" required></textarea>
+
+            <label for="quantity">Number of Boxes:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="20" value="1">
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Cherry & Choco. Crafted with passion.</p>
+</footer>
+
+</body>
+</html>
 </body>
 </html>
